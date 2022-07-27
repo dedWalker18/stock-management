@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block overview %}
+
+<h2>Add Log</h2>
+<form action="/trackers/{{TrackerId}}", method="POST">
+    <label for="fname">Log value:</label><br>
+    <select class="form-select" name="LogValue">
+      <option selected>Open this select menu</option>
+      <option value="Good">Good</option>
+      <option value="Average">Average</option>
+      <option value="Bad">Bad</option>
+    </select>
+    <input type="submit" value="Submit">
+  
+  </form>
+
+{% block logrow %}
+<div class="w3-panel">
+<div class="w3-row-padding" style="margin:0 -16px">
+  
+  <div class="w3-twothird">
+    <table class="w3-table w3-striped w3-white">
+      <thead>
+        <tr>
+          <th>
+          
+          </th>
+          <th>
+            Log Id
+          </th>
+          <th>
+            Log Value
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for log in loglist %}
+          <tr> 
+            <td><i class="fa fa-pencil w3-text-green w3-large"></i></td>
+            <td>
+              {{ loop.index }}
+            </td>
+            <td>
+              {{log["LogValue"]}}
+            </td>
+            <td>
+              <a href="/updatelog/{{log["LogId"]}}">Update Log</a>
+            </td>
+            <td>
+              <a href="/deletelog/{{log["LogId"]}}">Delete Log</a>
+            </td>
+          </tr>
+        {% endfor %}
+            
+
+  </div>
+</div>
+{% endblock %}
+{% endblock %}
+
+
+
+
+
+
+<h2>Text input fields</h2>
+
+
+

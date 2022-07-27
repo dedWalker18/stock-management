@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %} Rewards {% endblock%}
+
+{% block navbar %}
+
+<div class="w3-bar-block">
+    <a href="/dashboard" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Overview</a>
+    <a href="/motivation" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-quote-left fa-fw"></i>  Motivation Today</a>
+    <a href="/rewards" class="w3-bar-item w3-button w3-padding"><i class="fa fa-gift fa-fw"></i>  Rewards</a>
+    <a href="homepage" class="w3-bar-item w3-button w3-padding"><i class="fa fa-sign-out fa-fw"></i>  Sign Out</a>
+</div>
+
+{% endblock %}
+
+{% block overview %} {% endblock %}
+
+{% block motivation %}
+<hr>
+<div class="w3-container">
+  <h5>Recent Users</h5>
+  <ul class="w3-ul w3-card-4 w3-white">
+    <li class="w3-padding-16">
+      <span class="w3-xlarge">"There is nothing impossible to they who will try."</span><br>
+    </li>
+    <li class="w3-padding-16">
+      <span class="w3-xlarge">"Life has got all those twists and turns. You've got to hold on tight and off you go."
+    </span><br>
+    </li>
+    <li class="w3-padding-16">
+      <span class="w3-xlarge">"Keep your face always toward the sunshine, and shadows will fall behind you."
+        /span><br>
+    </li>
+  </ul>
+</div>
+<hr>
+
+
+<div class="w3-container">
+    <h5>Recent Comments</h5>
+    <div class="w3-row">
+      <div class="w3-col m2 text-center">
+      </div>
+      <div class="w3-col m10 w3-container">
+        <h4>John <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4>
+        <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+      </div>
+    </div>
+
+    <div class="w3-row">
+      <div class="w3-col m2 text-center">
+      </div>
+      <div class="w3-col m10 w3-container">
+        <h4>Bo <span class="w3-opacity w3-medium">Sep 28, 2014, 10:15 PM</span></h4>
+        <p> "When you have a dream, you've got to grab it and never let go." </p>
+      </div>
+    </div>
+</div>
+{% endblock %}

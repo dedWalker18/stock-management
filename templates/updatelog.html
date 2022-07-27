@@ -1,0 +1,34 @@
+{% extends "addlogint.html" %}
+
+{% block form %}
+{% if TrackerType == "Integer" %}
+
+<h2>Update Log</h2>
+
+<form action="/updatelog/{{logid}}", method="POST">
+  <label for="fname">Log value:</label><br>
+  <input type="number" name="LogValue"><hr>
+  <input type="submit" value="Submit">
+</form>
+
+{% else %}
+
+<form action="/updatelog/{{logid}}", method="POST">
+    <label for="fname">Log value:</label><br>
+    <select class="form-select" name="LogValue">
+      <option selected>Open this select menu</option>
+      <option value="Good">Good</option>
+      <option value="Average">Average</option>
+      <option value="Bad">Bad</option>
+    </select>
+    <input type="submit" value="Submit">
+  
+</form>
+
+
+{% endif %}
+
+{% endblock %}
+
+{% block logrow %}
+{% endblock %}
